@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch-tab settings</title>
+    <meta name="manifest.open_in_tab" content="true" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <section class="card">
+        <header class="hero">
+          <p class="eyebrow">switch-tab</p>
+          <h1>Shortcuts</h1>
+          <p class="lede">
+            Press the shortcut to switch tabs. The list follows the tab that
+            is actually active. Release to close.
+          </p>
+        </header>
+
+        <div class="rows">
+          <div class="row" data-action="next">
+            <div class="copy">
+              <h2>Forward</h2>
+              <p>Next tab in this window</p>
+            </div>
+            <button class="shortcut" type="button" data-record="next">
+              <span data-label="next">Ctrl + Q</span>
+            </button>
+          </div>
+          <p class="status" data-status="next" hidden></p>
+
+          <div class="row" data-action="prev">
+            <div class="copy">
+              <h2>Backward</h2>
+              <p>Previous tab in this window</p>
+            </div>
+            <button class="shortcut" type="button" data-record="prev">
+              <span data-label="prev">Ctrl + Shift + Q</span>
+            </button>
+          </div>
+          <p class="status" data-status="prev" hidden></p>
+        </div>
+
+        <div class="browser-status" data-command-status></div>
+
+        <footer class="actions">
+          <button class="ghost" type="button" data-reset>Reset defaults</button>
+          <button class="ghost" type="button" data-browser-shortcuts>
+            Browser shortcut settings
+          </button>
+        </footer>
+      </section>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
