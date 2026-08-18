@@ -39,3 +39,4 @@ jobs:
           name: switch-tab-${{ matrix.browser }}
           path: .output/*.zip
           if-no-files-found: error
+          include-hidden-files: true
