@@ -28,15 +28,15 @@ jobs:
       - name: Build (${{ matrix.browser }})
         run: |
           if [ "${{ matrix.browser }}" = "firefox" ]; then
-            npm run zip:firefox
+            npm run build:firefox
           else
-            npm run zip
+            npm run build
           fi
 
       - name: Upload artifact (${{ matrix.browser }})
         uses: actions/upload-artifact@v4
         with:
           name: switch-tab-${{ matrix.browser }}
-          path: .output/*.zip
+          path: .output/${{ matrix.browser == 'firefox' && 'firefox-mv2' || 'chrome-mv3' }}
           if-no-files-found: error
           include-hidden-files: true
