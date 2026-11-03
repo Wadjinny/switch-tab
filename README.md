@@ -9,6 +9,10 @@ A WXT browser extension that switches tabs with a vertical picker (icon, title, 
 
 On macOS the defaults use Control (`MacCtrl`), not Command, so they do not quit the browser.
 
+## Download
+
+Chrome and Firefox zips are attached to each [release](https://github.com/Wadjinny/switch-tab/releases/latest). For Chrome, unzip and use **Load unpacked** in `chrome://extensions`.
+
 ## Run
 
 ```bash
